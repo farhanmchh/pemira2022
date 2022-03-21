@@ -11,7 +11,7 @@
   </title>
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body background="/gambar/bglogin.png">
@@ -29,6 +29,9 @@
   <main class="container py-4">
             <div class="row">
 
+  
+  
+
                 <!--   Kandidat 01   -->
                 <div class="col-md-3">
                     <div class="card my-4" style="height: 27rem;">
@@ -40,8 +43,8 @@
                     <img class="card-img-top mt-2 ms-2" style="width: 15rem" src="/gambar/knd1.jpg">
                     <div class="card-body px-0 pb-2">
                         <div align="center">
-                            <button type="button" class="btn btn-warning">Visi & Misi</button><br>
-                            <button type="button" class="btn btn-success">Vote</button>
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#visimisi">Visi & Misi</button><br>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#vote">Vote</button>
                         </div>
                     </div>
                     </div>
@@ -59,8 +62,8 @@
                 <img class="card-img-top mt-2 ms-2" style="width: 15rem" src="/gambar/knd2.png">
                 <div class="card-body px-0 pb-2">
                     <div align="center">
-                        <button type="button" class="btn btn-warning">Visi & Misi</button><br>
-                        <button type="button" class="btn btn-success">Vote</button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#visimisi">Visi & Misi</button><br>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#vote">Vote</button>
                     </div>
                 </div>
                 </div>
@@ -78,8 +81,8 @@
                     <img class="card-img-top mt-2 ms-2" style="width: 15rem" src="/gambar/knd3.jpg">
                     <div class="card-body px-0 pb-2">
                         <div align="center">
-                            <button type="button" class="btn btn-warning">Visi & Misi</button><br>
-                            <button type="button" class="btn btn-success">Vote</button>
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#visimisi">Visi & Misi</button><br>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#vote">Vote</button>
                         </div>
                     </div>
                     </div>
@@ -96,8 +99,8 @@
                     <img class="card-img-top mt-2 ms-2" style="width: 15rem" src="/gambar/knd4.jpg">
                     <div class="card-body px-0 pb-2">
                         <div align="center">
-                            <button type="button" class="btn btn-warning">Visi & Misi</button><br>
-                            <button type="button" class="btn btn-success">Vote</button>
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#visimisi">Visi & Misi</button><br>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#vote">Vote</button>
                         </div>
                     </div>
                     </div>
@@ -105,6 +108,40 @@
             </div>
 </main>
 
+        <!-- Modal Visi & Misi-->
+        <div class="modal fade" id="visimisi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Visi & Misi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                1.bjkdfsdfsd <br>
+                2.kjkdsdnk
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal Vote-->
+        <div class="modal fade" id="vote" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <center>
+                        <h3>Apakah anda yakin?</h3>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">YA</button>
+                </div>
+            </div>
+            </div>
+        </div>
 
     
   <!--   Core JS Files   -->
