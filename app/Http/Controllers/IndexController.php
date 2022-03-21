@@ -25,6 +25,9 @@ class IndexController extends Controller
     public function vote(){
         return view("vote/index");
     }
+    public function kandidat(){
+        return view("kandidat/index");
+    }
     public function logout(Request $request){
         $request->session()->invalidate();
         return redirect("/login");

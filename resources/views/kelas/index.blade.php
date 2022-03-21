@@ -10,7 +10,6 @@
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Home</a></li>
                     <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Kelas</li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">Kelas</h6>
                 </nav>
                 </div>
             </nav>
@@ -35,7 +34,6 @@
                             <tr>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-30">Id</th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-30">Nama Kelas</th>
-                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-30">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -45,10 +43,6 @@
                                     </td>
                                     <td>
                                         <p class="text-xs text-secondary mb-0">XII RPL 1</p>
-                                    </td>
-                                    <td class="align-middle text-center">
-                                        <a href=""><i class="material-icons opacity-10">edit</i></a>
-                                        <a href=""><i class="material-icons opacity-10">delete</i></a>
                                     </td>
                                 </tr>
                             </tbody>

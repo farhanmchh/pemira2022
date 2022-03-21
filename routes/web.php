@@ -19,3 +19,4 @@ Route::get('/dashboard', [IndexController::class, 'dashboard']);
 Route::get('/user', [IndexController::class, 'user']);
 Route::get('/kelas', [IndexController::class, 'kelas']);
 Route::get('/vote', [IndexController::class, 'vote']);
+Route::get('/kandidat', [IndexController::class, 'kandidat']);
