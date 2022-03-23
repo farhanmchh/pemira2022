@@ -2,98 +2,41 @@
 
 @section('content')
 
-            <!-- Navbar -->
-            <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
-                <div class="container-fluid py-1 px-3">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Home</a></li>
-                    <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Data Pemilih</li>
-                    </ol>
-                </nav>
-                </div>
-            </nav>
-            <!-- End Navbar -->
-
-
-
-            <div class="container-fluid py-4">
+            <div class="container-fluid">
                 <div class="row">
-                <div class="col-12">
-                    <div class="card my-4">
-                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                        <div class="bg-gradient-info shadow-primary border-radius-lg pt-4 pb-3">
-                        <h6 class="text-white text-capitalize ps-3">Data Pemilih</h6>
-                        </div>
-                        
-                    </div>
-                    <div class="card-body px-0 pb-2">
-                        <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0">
-                            <thead>
-                            <tr>
-                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-30">Id</th>
-                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-30">Nama</th>
-                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-30">reg_number</th>
-                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-30">Password</th>
-                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-30">Kelas</th>
-                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-30">Role</th>
-                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-30">Status</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr align="center">
-                                    <td>
-                                        <p class="text-xs font-weight-bold mb-0">1</p>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs text-secondary mb-0">Chaerul Syawal</p>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs text-secondary mb-0">001</p>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs text-secondary mb-0">1L0V3U</p>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs text-secondary mb-0">XII RPL 1</p>
-                                    </td>
-                                    <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">Admin</span>
-                                    </td>
-                                    <td class="align-middle text-center text-sm">
-                                        <span class="badge badge-sm bg-gradient-success">Sudah Memilih</span>
-                                    </td>
-                                </tr>
 
-                                <tr align="center">
-                                    <td>
-                                        <p class="text-xs font-weight-bold mb-0">2</p>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs text-secondary mb-0">Mochamad farhan</p>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs text-secondary mb-0">002</p>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs text-secondary mb-0">M155U</p>
-                                    </td>
-                                    <td>
-                                        <p class="text-xs text-secondary mb-0">XII RPL 1</p>
-                                    </td>
-                                    <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-bold">Admin</span>
-                                    </td>
-                                    <td class="align-middle text-center text-sm">
-                                        <span class="badge badge-sm bg-gradient-danger">Belum Memilih</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </div>
-                    </div>
-                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Data Pemilih</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Id</th>
+                                                <th scope="col">Nama</th>
+                                                <th scope="col">Reg_Number</th>
+                                                <th scope="col">Password</th>
+                                                <th scope="col">Kelas</th>
+                                                <th scope="col">Role</th>
+                                                <th scope="col">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Chaerul Syawal</td>
+                                                <td>001</td>
+                                                <td>1L0V3U</td>
+                                                <td>XII RPL 1</td>
+                                                <td>Admin</td>
+                                                <td>Nonaktif</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
                 </div>
-                </div>
+            </div>
 @endsection

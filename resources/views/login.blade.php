@@ -1,65 +1,23 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <title>Login | Pemira 2022</title>
-    <link rel="stylesheet" href="/css/log.css">
-</head>
-<body>
-    <div class="container">
-            <div class="login shadow-lg p-3 mb-5 bg-body rounded" style="width: 30rem;" >
-                <h1 class="text-center text-info mb-3">LOGIN</h1>
-                    <form action="" method="POST">
-                        @csrf
-                        <div class="mb-3">
-                            <label class="form-label">Username</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Password</label>
-                            <input type="password" class="form-control" required>
-                        </div>
-                        <div class="mt-4 d-grid gap-2">
-                        <button type="submit" class="btn btn-info">Login</button>
-                        </div>
-                    </form>
-            </div>
-    </div>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="/gambar/logo.png">
   <title>
    LOGIN | PEMIRA 2022
   </title>
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-  <!-- Nucleo Icons -->
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
 </head>
 
-<body class="bg-gray-200">
+<body>
   
   <main class="main-content  mt-0">
     <div class="page-header align-items-start min-vh-100" style="background-image: url('/gambar/bglogin.png');">
-      <span class="mask bg-gradient-dark opacity-6"></span>
+     
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-4 col-md-8 col-12 mx-auto">
