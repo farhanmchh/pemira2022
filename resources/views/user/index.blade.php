@@ -1,47 +1,65 @@
-@extends('layouts/app')
+@extends('layouts.dashboard')
 
 @section('content')
-  <div class="container-fluid py-4">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-12">
-        <div class="card my-4">
-          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-            <div class="bg-gradient-info shadow-primary border-radius-lg pt-4 pb-3">
-              <h6 class="text-white text-capitalize ps-3">Data Pemilih</h6>
-            </div>
 
-          </div>
-          <div class="card-body px-0 pb-2">
-            <div class="table-responsive p-0">
-              <table class="table align-items-center text-center mb-0">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row justify-content-between">
+              <div class="col-sm-3">
+                <h4 class="card-title">Partisipan</h4>
+              </div>
+              <div class="col-sm-3">
+                <select name="" class="form-select text-center classroom">
+                  <option></option>
+                  @foreach ($classrooms as $classroom)
+                    @if (Request('filter') == $classroom->name)
+                      <option value="{{ $classroom->name }}" selected>{{ $classroom->name }}</option>
+                    @else
+                      <option value="{{ $classroom->name }}">{{ $classroom->name }}</option>
+                    @endif
+                  @endforeach
+                </select>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table text-center">
                 <thead>
                   <tr>
-                    <th class="text-secondary text-xs font-weight-bolder">NO</th>
-                    <th class="text-secondary text-xs font-weight-bolder">NAME</th>
-                    <th class="text-secondary text-xs font-weight-bolder">USERNAME</th>
-                    <th class="text-secondary text-xs font-weight-bolder">CLASSROOM</th>
-                    <th class="text-secondary text-xs font-weight-bolder">STATUS</th>
-                    <th class="text-secondary text-xs font-weight-bolder">ACTION</th>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Status</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="row-container">
+                  @if (Request('filter'))
+                    @foreach ($users as $user)
+                      <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>
+                          <i
+                            class="fs-3 mdi {{ $user->status
+                                ? 'mdi-checkbox-marked-circle-outline text-success'
+                                : 'mdi-checkbox-blank-circle-outline text-danger' }}">
+                          </i>
+                        </td>
+                      </tr>
+                    @endforeach
+                  @else
                   <tr>
-                    <td class="text-xs font-weight-bold mb-0">1</td>
-                    <td class="text-xs mb-0">Mochamad Farhan</td>
-                    <td class="text-xs mb-0">10101010</td>
-                    <td class="text-xs mb-0">XII RPL 1</td>
-                    <td class="align-middle text-sm">
-                      <span class="badge badge-sm bg-gradient-success">Sudah Memilih</span>
-                    </td>
-                    <td class="align-middle">
-                      <a href=""><i class="material-icons opacity-10">edit</i></a>
-                    </td>
+                    <th colspan="3">Filter terlebih dahulu</th>
                   </tr>
+                  @endif
                 </tbody>
               </table>
             </div>
           </div>
+
         </div>
       </div>
     </div>
-  @endsection
+  </div>
+@endsection

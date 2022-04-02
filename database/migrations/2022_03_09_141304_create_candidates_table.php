@@ -15,9 +15,11 @@ return new class extends Migration
   {
     Schema::create('candidates', function (Blueprint $table) {
       $table->id();
-      $table->integer('number')->unique();
+      $table->string('number')->unique();
       $table->string('name');
-      $table->string('image');
+      $table->string('image')->nullable();
+      $table->text('vission')->nullable();
+      $table->text('mission')->nullable();
       $table->timestamps();
     });
   }

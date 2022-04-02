@@ -19,9 +19,9 @@ class CandidateSeeder extends Seeder
 
     foreach ($array as $key => $arr) {
       Candidate::create([
-        'number' => $key + 1,
+        'number' => 0 . $key + 1,
         'name' => 'Candidate Name',
-        'image' => 'image.jpg'
+        'image' => NULL
       ]);
     }
   }

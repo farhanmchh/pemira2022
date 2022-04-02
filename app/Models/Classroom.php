@@ -11,4 +11,9 @@ class Classroom extends Model
 
   protected $table = 'classrooms';
   protected $guarded = ['id'];
+
+  public function user()
+  {
+    return $this->hasMany(User::class);
+  }
 }

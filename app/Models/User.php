@@ -38,4 +38,18 @@ class User extends Authenticatable
   protected $casts = [
     'email_verified_at' => 'datetime',
   ];
+
+  public function scopeFilter($query, $filter)
+  {
+    $query->when($filter ?? false, fn($query, $filter) =>
+      $query->whereHas('classroom', fn($query) => 
+        $query->where('name', $filter)
+      )
+    );
+  }
+
+  public function classroom()
+  {
+    return $this->belongsTo(Classroom::class);
+  }
 }
