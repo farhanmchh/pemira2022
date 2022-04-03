@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Classroom;
 use App\Models\User;
+use App\Models\Vote;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -18,10 +19,22 @@ class UserController extends Controller
 
   public function get($param)
   {
-    $users = User::whereHas('classroom', fn($query) => 
+    $users = User::whereHas(
+      'classroom',
+      fn ($query) =>
       $query->where('name', $param)
     )->get();
 
     return response()->json($users);
+  }
+
+  public function clear_vote(User $user)
+  {
+    Vote::where('user_id', $user->id)->delete();
+
+    $user->status = 0;
+    $user->save();
+
+    return response()->json($user);
   }
 }

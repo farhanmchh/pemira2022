@@ -11,6 +11,11 @@
               <div class="col-sm-3">
                 <h4 class="card-title">Partisipan</h4>
               </div>
+              @if (session('success'))
+                <div class="col-sm-3">
+                  <span class="fs-6 badge bg-success">{{ session('success') }}</span>
+                </div>
+              @endif
               <div class="col-sm-3">
                 <select name="" class="form-select text-center classroom">
                   <option></option>
@@ -31,6 +36,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Hapus Suara</th>
                   </tr>
                 </thead>
                 <tbody class="row-container">
@@ -46,12 +52,20 @@
                                 : 'mdi-checkbox-blank-circle-outline text-danger' }}">
                           </i>
                         </td>
+                        <td>
+                          @if ($user->status)
+                            <i class="btn p-0 fs-2 mdi mdi-power text-danger clear-vote"
+                              data-id="{{ $user->id }}"></i>
+                          @else
+                            <i class="fs-3 mdi mdi-checkbox-blank-circle-outline"></i>
+                          @endif
+                        </td>
                       </tr>
                     @endforeach
                   @else
-                  <tr>
-                    <th colspan="3">Filter terlebih dahulu</th>
-                  </tr>
+                    <tr>
+                      <th colspan="4">Filter terlebih dahulu</th>
+                    </tr>
                   @endif
                 </tbody>
               </table>

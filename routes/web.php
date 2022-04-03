@@ -39,6 +39,7 @@ Route::middleware('auth')->group(function () {
       Route::controller(UserController::class)->group(function () {
         Route::get('/', 'index');
         Route::get('/get/{param}', 'get');
+        Route::get('/clear_vote/{user}', 'clear_vote');
       });
     });
   });
