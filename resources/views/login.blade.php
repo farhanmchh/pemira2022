@@ -18,7 +18,7 @@
                 <div class="text-center mb-3">
                   <h1 class="card-title">Login</h1>
                   <img src="/image/logo.png" class="mb-3">
-                  @if ($votingPeriod)
+                  @if ($votingPeriod == '1')
                     <div class="fs-6 badge bg-danger d-block shadow-sm">Periode voting sudah berakhir</div>
                   @endif
                   @if (session('error'))

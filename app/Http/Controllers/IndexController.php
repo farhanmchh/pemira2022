@@ -33,7 +33,7 @@ class IndexController extends Controller
       } else {
         $votingPeriod = User::where('id', 1)->first('status');
 
-        if ($votingPeriod) {
+        if ($votingPeriod == '1') {
           return back();
         }
 
