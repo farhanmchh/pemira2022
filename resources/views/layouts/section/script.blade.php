@@ -1,6 +1,3 @@
-{{-- jquery --}}
-<script src="/assets/jquery/jquery.min.js"></script>
-
 {{-- bootstrap --}}
 <script src="/assets/bootstrap/bootstrap.bundle.min.js"></script>
 
@@ -24,3 +21,4 @@
 <script src="/js/user.js"></script>
 <script src="/js/vimi.js"></script>
 <script src="/js/vote.js"></script>
+<script src="/js/select2.js"></script>

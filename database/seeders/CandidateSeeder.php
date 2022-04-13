@@ -15,7 +15,7 @@ class CandidateSeeder extends Seeder
    */
   public function run()
   {
-    $array = [1, 1, 1, 1];
+    $array = [1, 1, 1];
 
     foreach ($array as $key => $arr) {
       Candidate::create([

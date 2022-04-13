@@ -10,6 +10,14 @@
 {{-- icon --}}
 <link rel="stylesheet" href="/assets/icon/css/materialdesignicons.min.css">
 
+{{-- jquery --}}
+<script src="/assets/jquery/jquery.min.js"></script>
+
+{{-- select2 --}}
+<link href="/assets/select2/select2.min.css" rel="stylesheet" />
+<script src="/assets/select2/select2.min.js"></script>
+<link href="/assets/select2/select2-bootstrap-5-theme.min.css" rel="stylesheet" />
+
 {{-- trix editor --}}
 <link rel="stylesheet" href="/assets/trix/trix.css">
 <script src="/assets/trix/trix.js"></script>

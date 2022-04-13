@@ -17,7 +17,7 @@
                 </div>
               @endif
               <div class="col-sm-3">
-                <select name="" class="form-select text-center classroom">
+                <select name="" class="select2 form-select classroom" data-placeholder="Pilih kelas">
                   <option></option>
                   @foreach ($classrooms as $classroom)
                     @if (Request('filter') == $classroom->name)
