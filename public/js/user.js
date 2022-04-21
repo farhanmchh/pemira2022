@@ -1,9 +1,10 @@
+// get users
 $('.classroom').change(function() {
   let url = new URL(window.location)
   url.searchParams.set('filter', $(this).val())
   window.history.pushState({}, '', url)
   
-  $.get(`/user/get/${$(this).val()}`, function(users) {
+  $.get(`/user/get_users/${$(this).val()}`, function(users) {
     let rowStack
     let status
     let hapus
@@ -17,26 +18,46 @@ $('.classroom').change(function() {
         hapus = '<i class="fs-3 mdi mdi-checkbox-blank-circle-outline"></i>'
       }
       
-      rowStack += row(user, status, hapus, i)
+      rowStack += userRow(user, status, hapus, i)
     })
 
     $('.row-container').html(rowStack)
   })
 })
 
-$('.clear-vote').click(function() {
-  $.get(`/user/clear_vote/${$(this).data('id')}`, function(res) {
+// clear vote
+$(document).on('click', '.clear-vote', function() {
+  $.get(`/user/get_user/${$(this).data('id')}`, function(user) {
     Swal.fire({
-      title: `Hapus suara`,
-      text: `Suara ${res.name} berhasil dihapus`,
-      icon: 'success'
-    }).then(() => {
-      location.reload()
+      icon: 'question',
+      titleText: `Hapus suara`,
+      text: user.name,
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Hapus!',
+      cancelButtonText: 'Batal',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        clearVote(user.id)
+      }
     })
   })
 })
 
-function row(user, status, hapus, i) {
+const clearVote = (param) => {
+  $.get(`/user/clear_vote/${param}`, function(res) {
+    Swal.fire({
+      icon: 'success',
+      title: `Hapus suara`,
+      text: `Suara ${res.name} berhasil dihapus`,
+    }).then(() => {
+      location.reload()
+    })
+  })
+}
+
+const userRow = (user, status, hapus, i) => {
   return `<tr>
             <th>${i + 1}</th>
             <td>${user.name}</td>

@@ -17,7 +17,13 @@ class UserController extends Controller
     ]);
   }
 
-  public function get($param)
+  public function get_user($param)
+  {
+    $user = User::find($param);
+    return response()->json($user);
+  }
+
+  public function get_users($param)
   {
     $users = User::whereHas(
       'classroom',

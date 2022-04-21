@@ -40,12 +40,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h5>Vission</h5>
+          <h5>Visi</h5>
           <div class="vission-container">
 
           </div>
 
-          <h5>Mission</h5>
+          <h5>Misi</h5>
           <div class="mission-container">
 
           </div>

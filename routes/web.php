@@ -38,7 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::prefix('user')->group(function () {
       Route::controller(UserController::class)->group(function () {
         Route::get('/', 'index');
-        Route::get('/get/{param}', 'get');
+        Route::get('/get_users/{param}', 'get_users');
+        Route::get('/get_user/{param}', 'get_user');
         Route::get('/clear_vote/{user}', 'clear_vote');
       });
     });
