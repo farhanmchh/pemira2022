@@ -6,6 +6,8 @@ use App\Http\Controllers\VoteController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CandidateController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Resources\Programs;
+use App\Models\Candidate;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,4 +67,9 @@ Route::middleware('auth')->group(function () {
       });
     });
   });
+});
+
+Route::get('/test-api', function() {
+  return response()->json(Programs::collection(Candidate::all()));
+  // return Candidate::all();
 });

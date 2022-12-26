@@ -4,7 +4,7 @@ $('.btn-countdown').click(function() {
   countdown(2)
 })
 
-function countdown(timeleft) {
+const countdown = (timeleft) => {
   return new Promise((resolve, reject) => {
     let timer = setInterval(() => {
       $('.countdown').html(timeleft)
